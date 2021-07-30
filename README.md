@@ -1,7 +1,7 @@
-# SWIGGY
+# SWIGGY (Implemented an online food ordering system)
 
-Swiggy is India's largest and highest-valued online food ordering
-and delivery platform
+Swiggy is India's largest online food ordering and delivery platform, founded in 2014. 
+Swiggy is based in Bangalore, India, and as of March 2019, was operating in 100 Indian cities.
 
 The aim of this project is to a meal ordering service like swiggy,
 where you can order meals from your favorite restaurants where
