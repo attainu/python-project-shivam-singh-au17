@@ -1,12 +1,33 @@
+"""
+Here I have created a function called cut where the price of any item of 
+all the restaurants selected by the user is stored and if the price of 
+that card is above 300 and up to 300 then it will get a discount 
+of 15% If five hundred percent is above ₹ 500, then a discount 
+of 20% is given to him and the total value is told to him.
+
+"""
 from random import randint
+
+
+
+
+
+"""
+1ST STEP:
+Here first I have created a class named swiggy And here I have created 
+three restaurants and given five items to each restaurant.
+
+"""
+
 class swiggy():
+
     def __init__(self):
         print()
-        print("#"*30 ,"HELLO, WELCOME TO SWIGGY", "#"*30)
+        print("#"*25 ,"HELLO, WELCOME TO SWIGGY RESTAURANT", "#"*25)
         
-        global res, Biraj_International, Grill_Inn, Pizzaria, dic, history
+        global res, Biraj_International, Grill_Inn, Pizzaria, dic, history 
         
-        Biraj_International = {
+        Biraj_International = {  
             "Paneer Chilli" : 170, 
             "Paneer Tikka" : 250, 
             "Mix Veg      " : 140, 
@@ -14,7 +35,7 @@ class swiggy():
             "Shahi Kofta" : 180
             }
 
-        Grill_Inn = {
+        Grill_Inn = {       
             "Surprise Burger" : 129, 
             "Grilled Sandwich" : 99, 
             "Paneer Wrap" : 169, 
@@ -22,7 +43,7 @@ class swiggy():
             "Pizza Puff     " : 129
             }
 
-        Pizzaria = {
+        Pizzaria = {      
             "Margherita Pizza" : 90, 
             "Veg Pizza    " : 90, 
             "Garlic Bread" : 99, 
@@ -37,16 +58,27 @@ class swiggy():
             "PIZZARIA": Pizzaria
             }
 
-        dic = {}
-        history = {}
-
+        dic = {}        # To store any item ordered by the user
+        history = {}    # To see the history of any items ordered by the user at any restaurants.
 
         self.main_menu()
     
 
+
+
+
+
+    """
+    2ND STEP:
+    Here I have created a function named main menu where any user can 
+    order food, restaurants corner, exit and see their order history 
+    and can select any of them option.
+
+    """
+
     def main_menu(self):
         print("")
-        print("="*37 ,"MAIN  MENU", "="*37)
+        print("="*35 ,"OUR  MAIN  MENU", "="*35)
         print()
         print("SELECT ANY ONE OF THESE AVAILABLE OPTIONS")
         print()
@@ -68,7 +100,6 @@ class swiggy():
                 print("THANKYOU FOR USING OUR SERVICES, HOPE TO SEE YOU AGAIN")
                 print("="*86)
                 exit()
-                break
             elif inp1 == 'H':
                 self.History(history)
                 break
@@ -77,6 +108,15 @@ class swiggy():
 
 
 
+
+
+    """
+    I created a function named restaurant where user can see all available 
+    restaurants and can do anything to any of them and here this function is 
+    doing this function when a user selects a restaurant then he can click 
+    on that restaurant calls the function
+
+    """
 
     def restaurants(self):
 
@@ -133,6 +173,21 @@ class swiggy():
             except:
                 print("INVALID INPUT PLEASE TRY AGAIN")
 
+
+
+
+
+    """
+    Here I have created a function in the name of a restaurant, there is a 
+    different function for all restaurants and each restaurant's function 
+    has some main options like exit to go to main menu and go to card and 
+    The function of each restaurant has this facility that it can use all 
+    the items available in that restaurant and whenever an item is 
+    selected by a user, it is stored in the dictionary and it is also 
+    accounted here. How many similar orders are being done by which scheme?
+
+    """
+
     def Biraj_International(self):
         print()
         print("\n                     (M) MAIN MENU    (E) EXIT    (C)CART")
@@ -150,6 +205,7 @@ class swiggy():
                 print("THANKYOU FOR USING OUR SERVICES, HOPE TO SEE YOU AGAIN")
                 print("="*86)
                 exit()
+
             if inp == "C":
                 if counter < 4:
                     self.cart(dic,Biraj_International)
@@ -203,6 +259,21 @@ class swiggy():
             except:
                 print("INVALID INPUT PLEASE TRY AGAIN--")
 
+
+
+
+
+    """
+    Here I have created a function in the name of a restaurant, there is a 
+    different function for all restaurants and each restaurant's function 
+    has some main options like exit to go to main menu and go to card and 
+    The function of each restaurant has this facility that it can use all 
+    the items available in that restaurant and whenever an item is 
+    selected by a user, it is stored in the dictionary and it is also 
+    accounted here. How many similar orders are being done by which scheme?
+
+    """
+    
     def Grill_Inn(self):
             print()
             print("\n                     (M) MAIN MENU    (E) EXIT    (C)CART")
@@ -270,6 +341,21 @@ class swiggy():
                 except:
                     print("INVALID INPUT PLEASE TRY AGAIN")
 
+
+
+
+
+    """
+    Here I have created a function in the name of a restaurant, there is a 
+    different function for all restaurants and each restaurant's function 
+    has some main options like exit to go to main menu and go to card and 
+    The function of each restaurant has this facility that it can use all 
+    the items available in that restaurant and whenever an item is 
+    selected by a user, it is stored in the dictionary and it is also 
+    accounted here. How many similar orders are being done by which scheme?
+
+    """
+    
     def Pizzaria(self):
             print()
             print("\n                     (M) MAIN MENU    (E) EXIT    (C)CART")
@@ -337,7 +423,21 @@ class swiggy():
                 except:
                     print("INVALID INPUT PLEASE TRY AGAIN")
             
+
+
+
+
+    """
+    Here I have created a function called cart where the price of any item of 
+    all the restaurants selected by the user is stored and if the price of 
+    that card is above 300 and up to 300 then it will get a discount 
+    of 15% If five hundred percent is above ₹ 500, then a discount 
+    of 20% is given to him and the total value is told to him.
+
+    """
+
     def cart(self,dic,name):
+
         print(">"*40, "CART", "<"*40)
         print()
         print('\t'+"-"*68)
@@ -385,6 +485,13 @@ class swiggy():
                 exit()
             else:
                 print("INVALID INPUT PLEASE TRY AGAIN@")
+
+
+
+
+
+
+
 
     def payment(self, s):
         print()
@@ -451,6 +558,13 @@ class swiggy():
             else:
                 print("INVALID INPUT PLEASE TRY AGAIN")
         
+
+
+
+
+
+
+
     def History(self,history):
         print()
         print(">"*33, " ORDER HISTORY","<"*33)
@@ -478,6 +592,13 @@ class swiggy():
                 exit()
             else:
                 print("INVALID INPUT TRY AGAIN")
+
+
+
+
+
+
+
 
     def res_corner(self):
         print()
@@ -899,29 +1020,6 @@ class swiggy():
 
 if __name__ == "__main__":
     swiggy()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
