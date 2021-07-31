@@ -1,10 +1,4 @@
 """
-Here I have created a function called cut where the price of any item of 
-all the restaurants selected by the user is stored and if the price of 
-that card is above 300 and up to 300 then it will get a discount 
-of 15% If five hundred percent is above ₹ 500, then a discount 
-of 20% is given to him and the total value is told to him.
-
 """
 from random import randint
 
