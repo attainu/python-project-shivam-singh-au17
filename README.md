@@ -12,11 +12,11 @@ try to deliver the items as soon as possible
 You can download the repo or clone to your local machine
 ##### step 1
 ```bash
-git clone https://github.com/attainu/python-project-nishant-singh-au9.git
+git clone https://github.com/attainu/python-project-shivam-singh-au17.git
 ```
 ##### step 2
 ```bash
-cd python-project-nishant-singh-au9
+cd python-project-shivam-singh-au17
 ```
 
 ##### step 3
